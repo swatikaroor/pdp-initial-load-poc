@@ -1,0 +1,22 @@
+#spark:
+#  appName: PDP Initial Load
+#  streamingDuration: 60000
+#  mode: cluster
+#  master: local[2]
+
+#entities:
+#  - name: sap-cic-product-product
+#    tableName: sap_ods_product
+#  - name: sap-cic-product-product
+#    translationTable: true
+#    tableName: sap_ods_product_texts
+
+
+blobStorage:
+    name: blob_sas
+    type: azure_blob
+    description: Datastore pointing to a blob container using SAS token.
+    abfssPath: "abfss://7973-data-cic-cs-dev-cs-sit@insightstoragedev.dfs.core.windows.net/cornerstone-data-publish/%s/"
+#    abfssPath: "abfss://%s@%s.dfs.core.windows.net/cornerstone-data-publish/%s/"
+
+#    containerPath: "%s-data-cic-%s"
